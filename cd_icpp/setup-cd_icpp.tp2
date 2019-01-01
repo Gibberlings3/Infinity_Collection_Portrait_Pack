@@ -1,0 +1,111 @@
+BACKUP ~cd_icpp/backup~
+SUPPORT ~https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/~
+
+VERSION ~v1~
+
+ALWAYS
+
+  ACTION_IF NOT VARIABLE_IS_SET cd_always THEN BEGIN // check to make this happen only once per install
+    
+	OUTER_SET cd_always = 1
+	INCLUDE ~cd_icpp/lib/cd_portrait_copy.tph~
+  
+  END
+
+END
+
+README ~cd_icpp/readme-cd_icpp.html~
+
+LANGUAGE ~English~ ~english~ ~cd_icpp/english/setup.tra~
+
+/////                                                  \\\\\
+///// Baldur's Gate                                    \\\\\
+/////                                                  \\\\\
+
+BEGIN @100 DESIGNATED 100
+
+ACTION_FOR_EACH file IN 
+  cdvcael cdvheph cdvimoe cdvorf1 cdvorm1 cdvshf1 cdvvico cdvbael cdvglin cdvmkhi cdvscha cdvshm1 cdvunna cdvvogh // bg
+BEGIN
+						
+  LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/bg" END
+
+END
+
+ACTION_FOR_EACH file IN 
+  cdugdrf cdugmhf cdugmlf cduajan cduedwi cdusafa cdualor cdubran cducora cdudyna cdueldo cdufald cdugarr cduimoe cdujahe cdukaga cdukhal cduman1 cduman2 cdumins // bg-bg2 common
+  cdumont cduquay cdvdorn cdvkiva cdvneer cdvnhor cdvrasa cdxclar cdvhelm cdvhvln cduwom1 cdushar cduskie cdutiax cduvico cduwom2 cduxan cduxzar cduyesl cdvskan
+BEGIN
+						
+  LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/bg_common" END
+
+END
+
+/////                                                  \\\\\
+///// Baldur's Gate II                                 \\\\\
+/////                                                  \\\\\
+
+BEGIN @200 DESIGNATED 200
+
+ACTION_FOR_EACH file IN 
+  cdwaeri cdwanom cdwcern cdwedwi cdwhaer cdwimoe cdwjahe cdwjan cdwjon cdwkeld cdwkorg cdwmazz cdwmins cdwnali cdwsare cdwvaly cdwvico cdwyosh cdxhexx cdxwils // bg2
+BEGIN
+						
+  LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/bg2" END
+
+END
+
+ACTION_FOR_EACH file IN 
+  cdugdrf cdugmhf cdugmlf cduajan cduedwi cdusafa cdualor cdubran cducora cdudyna cdueldo cdufald cdugarr cduimoe cdujahe cdukaga cdukhal cduman1 cduman2 cdumins // bg-bg2 common
+  cdumont cduquay cdvdorn cdvkiva cdvneer cdvnhor cdvrasa cdxclar cdvhelm cdvhvln cduwom1 cdushar cduskie cdutiax cduvico cduwom2 cduxan cduxzar cduyesl cdvskan
+BEGIN
+						
+  LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/bg_common" END
+
+END
+
+/////                                                  \\\\\
+///// Icewind Dale                                     \\\\\
+/////                                                  \\\\\
+
+BEGIN @301 DESIGNATED 300
+SUBCOMPONENT @300
+
+ACTION_FOR_EACH file IN 
+  cdy2df2 cdy2emc cdy2fb1 cdy2gmt cdy2mh1 cdy2mo1 cdydff cdydmt cdyefc cdyeff cdyefw cdyefw2 cdyemf cdyemf2 cdyemt cdyemw cdyfd // iwd
+  cdyff cdyff2 cdyft2 cdyfw cdygfw cdygmw cdyhamf cdyheff cdyhemf cdyhemt cdymc4 cdymf2 cdymf6 cdymf7 cdymw4 cdy2dmf cdy2fh4
+  cdy2fo1 cdy2hamt cdy2mb1 cdyft cdyfw2 cdyfw3 cdyhaff cdyhaft cdyhefb cdyhefc cdyhefw cdyhemw cdymb cdymb2 cdymc cdymc2 cdymc3
+  cdymf cdymf3 cdymf4 cdymf5 cdymw cdymw2 cdymw3 cdydmc
+BEGIN
+						
+  LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/iwd" END
+
+END
+
+/////                                                  \\\\\
+///// Icewind Dale II                                  \\\\\
+/////                                                  \\\\\
+
+BEGIN @400 DESIGNATED 400
+SUBCOMPONENT @300
+
+ACTION_FOR_EACH file IN // iwd2 includes all iwd portraits
+  cdy2df2 cdy2emc cdy2fb1 cdy2gmt cdy2mh1 cdy2mo1 cdydff cdydmt cdyefc cdyeff cdyefw cdyefw2 cdyemf cdyemf2 cdyemt cdyemw cdyfd // iwd
+  cdyff cdyff2 cdyft2 cdyfw cdygfw cdygmw cdyhamf cdyheff cdyhemf cdyhemt cdymc4 cdymf2 cdymf6 cdymf7 cdymw4 cdy2dmf cdy2fh4
+  cdy2fo1 cdy2hamt cdy2mb1 cdyft cdyfw2 cdyfw3 cdyhaff cdyhaft cdyhefb cdyhefc cdyhefw cdyhemw cdymb cdymb2 cdymc cdymc2 cdymc3
+  cdymf cdymf3 cdymf4 cdymf5 cdymw cdymw2 cdymw3 cdydmc
+BEGIN
+						
+  LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/iwd" END
+
+END
+
+ACTION_FOR_EACH file IN 
+  cdz2fe1 cdz2fe2 cdz2ff1 cdz2ft1 cdz2gn1 cdz2ma1 cdz2me1 cdz2mf1 cdz2mg1 cdz2fe3 cdz2fh1 cdz2fh2 // iwd2
+  cdz2fh3 cdz2mf2 cdz2mh2 cdz2mh3 cdz2mh4 cdz2mh5 cdz2mh6 cdz2mh7 cdz2ml1 cdz2mp1 cdz2mw1 cdz2mw2
+
+BEGIN
+						
+  LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/iwd2" END
+
+END
