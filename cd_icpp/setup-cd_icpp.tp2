@@ -1,4 +1,4 @@
-BACKUP ~cd_icpp/backup~
+BACKUP ~weidu_external/cd_icpp/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/~
 
 VERSION ~v2~
@@ -17,13 +17,15 @@ END
 README ~cd_icpp/readme-cd_icpp-%LANGUAGE%.html~ ~cd_icpp/readme-cd_icpp.html~
 
 LANGUAGE ~English~  ~english~ ~cd_icpp/lang/english/setup.tra~
-LANGUAGE ~Francais~ ~french~  ~cd_icpp/lang/french/setup.tra~
+LANGUAGE ~Francais~ ~french~  ~cd_icpp/lang/english/setup.tra~
+                              ~cd_icpp/lang/french/setup.tra~
 
 /////                                                  \\\\\
 ///// Baldur's Gate                                    \\\\\
 /////                                                  \\\\\
 
 BEGIN @100 DESIGNATED 100
+LABEL ~cd_icpp_bg~
 
 ACTION_FOR_EACH file IN 
   cdvcael cdvheph cdvimoe cdvorf1 cdvorm1 cdvshf1 cdvvico cdvbael cdvglin cdvmkhi cdvscha cdvshm1 cdvunna cdvvogh // bg
@@ -47,6 +49,7 @@ END
 /////                                                  \\\\\
 
 BEGIN @200 DESIGNATED 200
+LABEL ~cd_icpp_bg2~
 
 ACTION_FOR_EACH file IN 
   cdwaeri cdwanom cdwcern cdwedwi cdwhaer cdwimoe cdwjahe cdwjan cdwjon cdwkeld cdwkorg cdwmazz cdwmins cdwnali cdwsare cdwvaly cdwvico cdwyosh cdxhexx cdxwils // bg2
@@ -71,6 +74,7 @@ END
 
 BEGIN @301 DESIGNATED 300
 SUBCOMPONENT @300
+LABEL ~cd_icpp_iwd~
 
 ACTION_FOR_EACH file IN 
   cdy2df2 cdy2emc cdy2fb1 cdy2gmt cdy2mh1 cdy2mo1 cdydff cdydmt cdyefc cdyeff cdyefw cdyefw2 cdyemf cdyemf2 cdyemt cdyemw cdyfd // iwd
@@ -89,6 +93,7 @@ END
 
 BEGIN @400 DESIGNATED 400
 SUBCOMPONENT @300
+LABEL ~cd_icpp_iwd2~
 
 ACTION_FOR_EACH file IN // iwd2 includes all iwd portraits
   cdy2df2 cdy2emc cdy2fb1 cdy2gmt cdy2mh1 cdy2mo1 cdydff cdydmt cdyefc cdyeff cdyefw cdyefw2 cdyemf cdyemf2 cdyemt cdyemw cdyfd // iwd
