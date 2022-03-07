@@ -1,7 +1,7 @@
 BACKUP ~cd_icpp/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/~
 
-VERSION ~v1~
+VERSION ~v2~
 
 ALWAYS
 
@@ -14,9 +14,10 @@ ALWAYS
 
 END
 
-README ~cd_icpp/readme-cd_icpp.html~
+README ~cd_icpp/readme-cd_icpp-%LANGUAGE%.html~ ~cd_icpp/readme-cd_icpp.html~
 
-LANGUAGE ~English~ ~english~ ~cd_icpp/english/setup.tra~
+LANGUAGE ~English~  ~english~ ~cd_icpp/lang/english/setup.tra~
+LANGUAGE ~Francais~ ~french~  ~cd_icpp/lang/french/setup.tra~
 
 /////                                                  \\\\\
 ///// Baldur's Gate                                    \\\\\
@@ -27,7 +28,7 @@ BEGIN @100 DESIGNATED 100
 ACTION_FOR_EACH file IN 
   cdvcael cdvheph cdvimoe cdvorf1 cdvorm1 cdvshf1 cdvvico cdvbael cdvglin cdvmkhi cdvscha cdvshm1 cdvunna cdvvogh // bg
 BEGIN
-						
+
   LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/bg" END
 
 END
@@ -36,7 +37,7 @@ ACTION_FOR_EACH file IN
   cdugdrf cdugmhf cdugmlf cduajan cduedwi cdusafa cdualor cdubran cducora cdudyna cdueldo cdufald cdugarr cduimoe cdujahe cdukaga cdukhal cduman1 cduman2 cdumins // bg-bg2 common
   cdumont cduquay cdvdorn cdvkiva cdvneer cdvnhor cdvrasa cdxclar cdvhelm cdvhvln cduwom1 cdushar cduskie cdutiax cduvico cduwom2 cduxan cduxzar cduyesl cdvskan
 BEGIN
-						
+
   LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/bg_common" END
 
 END
@@ -50,7 +51,7 @@ BEGIN @200 DESIGNATED 200
 ACTION_FOR_EACH file IN 
   cdwaeri cdwanom cdwcern cdwedwi cdwhaer cdwimoe cdwjahe cdwjan cdwjon cdwkeld cdwkorg cdwmazz cdwmins cdwnali cdwsare cdwvaly cdwvico cdwyosh cdxhexx cdxwils // bg2
 BEGIN
-						
+
   LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/bg2" END
 
 END
@@ -59,7 +60,7 @@ ACTION_FOR_EACH file IN
   cdugdrf cdugmhf cdugmlf cduajan cduedwi cdusafa cdualor cdubran cducora cdudyna cdueldo cdufald cdugarr cduimoe cdujahe cdukaga cdukhal cduman1 cduman2 cdumins // bg-bg2 common
   cdumont cduquay cdvdorn cdvkiva cdvneer cdvnhor cdvrasa cdxclar cdvhelm cdvhvln cduwom1 cdushar cduskie cdutiax cduvico cduwom2 cduxan cduxzar cduyesl cdvskan
 BEGIN
-						
+
   LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/bg_common" END
 
 END
@@ -77,7 +78,7 @@ ACTION_FOR_EACH file IN
   cdy2fo1 cdy2hamt cdy2mb1 cdyft cdyfw2 cdyfw3 cdyhaff cdyhaft cdyhefb cdyhefc cdyhefw cdyhemw cdymb cdymb2 cdymc cdymc2 cdymc3
   cdymf cdymf3 cdymf4 cdymf5 cdymw cdymw2 cdymw3 cdydmc
 BEGIN
-						
+
   LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/iwd" END
 
 END
@@ -95,7 +96,7 @@ ACTION_FOR_EACH file IN // iwd2 includes all iwd portraits
   cdy2fo1 cdy2hamt cdy2mb1 cdyft cdyfw2 cdyfw3 cdyhaff cdyhaft cdyhefb cdyhefc cdyhefw cdyhemw cdymb cdymb2 cdymc cdymc2 cdymc3
   cdymf cdymf3 cdymf4 cdymf5 cdymw cdymw2 cdymw3 cdydmc
 BEGIN
-						
+
   LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/iwd" END
 
 END
@@ -105,7 +106,7 @@ ACTION_FOR_EACH file IN
   cdz2fh3 cdz2mf2 cdz2mh2 cdz2mh3 cdz2mh4 cdz2mh5 cdz2mh6 cdz2mh7 cdz2ml1 cdz2mp1 cdz2mw1 cdz2mw2
 
 BEGIN
-						
+
   LAF cd_pc_portrait_copy STR_VAR source = EVAL "%file%" source_path = "cd_icpp/iwd2" END
 
 END
